@@ -29,7 +29,7 @@ O projeto **Petshop api** é uma API para gerenciar cadastros de um petshop.
 
 ## 🐕&nbsp; Petshop api v2
 
-O projeto **Petshop api v2** é uma outra versão do Petshop API. Nela, a API é refatorada para utilizar o Sequelize e são incluídas novas funcionalidades como controle de serviços e uma estrutura para o seu blog, salvando título, conteúdo e comentários no MongoDB.
+O projeto **Petshop api v2** é uma outra versão do Petshop API. Nela, a API é refatorada para utilizar o Sequelize e são incluídas novas funcionalidades como controle de serviços e uma estrutura para blog, salvando título, conteúdo e comentários no MongoDB.
 
 ---
 
