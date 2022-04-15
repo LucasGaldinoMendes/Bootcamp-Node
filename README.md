@@ -4,7 +4,6 @@
 
 - [Sobre](#-sobre)
 - [delivery-api](#-delivery-api)
-- [oAuth20Example](#-auth-2-Example)
 - [petshop-api](#-petshop-api)
 - [petshop-api-v2](#-petshop-api-v2)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
@@ -19,12 +18,6 @@ O projeto **Bootcamp-Node-js** é um repositório dos trabalhos avaliativos do *
 ## 🍔&nbsp; Delivery api
 
 O projeto **Delivery api** é uma API para controlar pedidos de um delivery de comida.
-
----
-
-## 💻&nbsp; Auth 2 Example
-
-O projeto **oauth20.Example** é uma implementação do OAuth2.0 para fazer login através de uma conta do facebook.
 
 ---
 
