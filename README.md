@@ -60,6 +60,9 @@ Os projeto foram desenvolvidos utilizando as seguintes tecnologias
     # Instalar as dependências
     $ npm install
 
+    #Configurar a base de dados
+    Caso o projeto utilize uma base de dados, é necessário criar a base de dados com o script bd.sql e configurar a uri de conexão em repositories/db.js. No caso de base de dados NoSQL a conexão deve ser configurada em respositories/mongo.db.js (para essa base de dados não há script, é necessário cria-lá).  
+    
     # Iniciar o projeto
     $ node index.js
 ```

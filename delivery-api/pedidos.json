@@ -1,5 +1,5 @@
 {
-  "nextId": 502,
+  "nextId": 503,
   "pedidos": [
     {
       "id": 1,
@@ -3993,6 +3993,14 @@
       "valor": 32.5,
       "entregue": true,
       "timestamp": "2022-03-14T22:23:50.067Z"
+    },
+    {
+      "id": 502,
+      "cliente": "Rosaura Azenha",
+      "produto": "Pizza Pepperoni",
+      "valor": 32.5,
+      "entregue": false,
+      "timestamp": "2022-04-16T14:21:52.978Z"
     }
   ]
 }

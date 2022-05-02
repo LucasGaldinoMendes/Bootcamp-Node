@@ -3,7 +3,7 @@ import AnimalRepository from "../repositories/animal.repository.js";
 
 async function createServico(servico){
     if (!await AnimalRepository.getAnimal(servico.animalId)) {
-        throw new Error("Id do animal informado não consta na base de dados")
+        throw new Error("Id do animal informado não consta na base de dados");
     }
     return await ServicoRepository.insertServico(servico);
 }
@@ -21,7 +21,7 @@ async function getServico(id){
 
 async function updateServico(servico){
     if (!await AnimalRepository.getAnimal(servico.animalId)) {
-        throw new Error("Id do animal informado não consta na base de dados")
+        throw new Error("Id do animal informado não consta na base de dados");
     }
     return await ServicoRepository.updateServico(servico);
 }
@@ -36,4 +36,4 @@ export default{
     getServico,
     updateServico,
     deleteServico
-}
+};

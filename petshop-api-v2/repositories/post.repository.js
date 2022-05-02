@@ -18,7 +18,7 @@ async function getPosts(){
     try {
         await client.connect();
         const post= await client.db("petshop").collection("posts").find({}).toArray();
-        return post
+        return post;
     } catch (error) {
         throw error;
     }finally{

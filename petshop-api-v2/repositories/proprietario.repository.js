@@ -18,7 +18,7 @@ async function getProprietarios(){
 
 async function getProprietario(id){
     try {
-       return await Proprietario.findByPk(id)
+       return await Proprietario.findByPk(id);
     } catch (error) {
         throw error;
     }
@@ -43,7 +43,7 @@ async function deleteProprietario(id){
             where: {
                 proprietarioId: id
             }
-        })
+        });
     } catch (error) {
         throw error;
     }
@@ -55,4 +55,4 @@ export default{
     getProprietario,
     updateProprietario,
     deleteProprietario
-}
+};
