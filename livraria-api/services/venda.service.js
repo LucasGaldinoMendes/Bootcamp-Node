@@ -3,13 +3,22 @@ import ClienteRepository from "../repositories/cliente.repository.js";
 import LivroRepository from "../repositories/livro.repository.js";
 
 async function createVenda(venda){
+    let errors;
     if(!await ClienteRepository.getCliente(venda.cliente_id)){
-        throw new Error("Id do cliente não consta na base de dados");
+        errors = "Id do cliente não consta na base de dados. ";
     }
     const livro = await LivroRepository.getLivro(venda.livro_id);
     if(!livro){
-        throw new Error("Id do livro não consta na base de dados");
+        errors = "Id do livro não consta na base de dados. ";
     }
+    if (livro.estoque < 1) {
+        errors = "O livro informado não está disponível em nosso estoque. ";
+    }
+    if(errors){
+        throw new Error(errors);
+    }
+    livro.estoque--;
+    LivroRepository.updateLivro(livro);
     venda.valor = livro.valor;
     return await VendaRepository.insertVenda(venda);
 }

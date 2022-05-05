@@ -11,22 +11,30 @@ async function createLivro(livro){
 }
 
 async function updateLivro(livro){
+    let errors;
     if(!await LivroRepository.getLivro(livro.livro_id)){
-        throw new Error("Id do livro não consta na base de dados");
+        errors = "Id do livro não consta na base de dados. ";
     }
     if(!await AutorRepository.getAutor(livro.autor_id)){
-        throw new Error("Id do autor não consta na base de dados");
+        errors = "Id do autor não consta na base de dados. ";
+    }
+    if(errors){
+        throw new Error(errors);
     }
     return await LivroRepository.updateLivro(livro);
 }
 
 async function deleteLivro(id){
+    let errors;
     if(!await LivroRepository.getLivro(id)){
-        throw new Error("Id do livro não encontrado");
+        errors = "Id do livro não encontrado. ";
     }
     const sales = await VendaRepository.getVendasByLivroId(id);
     if (sales.length > 0) {
-        throw new Error("Livro já possui vendas. Não é possível realizar a exclusão");
+        errors = "Livro já possui vendas. Não é possível realizar a exclusão.";
+    }
+    if(errors){
+        throw new Error(errors);
     }
     return await LivroRepository.deleteLivro(id);
 }
