@@ -36,7 +36,8 @@ O projeto **Petshop api v2** é uma outra versão do Petshop API. Nela, a API é
 
 ## 📚&nbsp; Livraria api
 
-O projeto **Livraria api** é uma outra versão do Petshop API. Nela, a API é refatorada para utilizar o Sequelize e são incluídas novas funcionalidades como controle de serviços e uma estrutura para blog, salvando título, conteúdo e comentários no MongoDB.
+O projeto **Livraria api** é uma API para controlar cadastros de uma livraria. Nela está incluso controle de clientes,
+livros, autores e vendas. Também é possível adicionar informações dos livros e avaliações dos mesmos.
 
 ---
 
