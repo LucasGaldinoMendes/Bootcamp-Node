@@ -6,6 +6,7 @@
 - [delivery-api](#-delivery-api)
 - [petshop-api](#-petshop-api)
 - [petshop-api-v2](#-petshop-api-v2)
+- [livraria-api](#-livraria-api)
 - [Tecnologias Utilizadas](#-tecnologias-utilizadas)
 - [Como baixar o projeto](#-como-baixar-o-projeto)
 
@@ -30,6 +31,12 @@ O projeto **Petshop api** é uma API para gerenciar cadastros de um petshop.
 ## 🐕&nbsp; Petshop api v2
 
 O projeto **Petshop api v2** é uma outra versão do Petshop API. Nela, a API é refatorada para utilizar o Sequelize e são incluídas novas funcionalidades como controle de serviços e uma estrutura para blog, salvando título, conteúdo e comentários no MongoDB.
+
+---
+
+## 📚&nbsp; Livraria api
+
+O projeto **Livraria api** é uma outra versão do Petshop API. Nela, a API é refatorada para utilizar o Sequelize e são incluídas novas funcionalidades como controle de serviços e uma estrutura para blog, salvando título, conteúdo e comentários no MongoDB.
 
 ---
 
@@ -61,7 +68,10 @@ Os projeto foram desenvolvidos utilizando as seguintes tecnologias
     $ npm install
 
     #Configurar a base de dados
-    Caso o projeto utilize uma base de dados, é necessário criar a base de dados com o script bd.sql e configurar a uri de conexão em repositories/db.js. No caso de base de dados NoSQL a conexão deve ser configurada em respositories/mongo.db.js (para essa base de dados não há script, é necessário cria-lá).  
+    Caso o projeto utilize uma base de dados, é necessário criar a base de dados 
+    com o script bd.sql e configurar a uri de conexão em repositories/db.js. 
+    No caso de base de dados NoSQL a conexão deve ser configurada em 
+    respositories/mongo.db.js (para essa base de dados não há script, é necessário cria-lá).  
     
     # Iniciar o projeto
     $ node index.js

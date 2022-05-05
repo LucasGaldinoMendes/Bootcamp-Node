@@ -1,6 +1,3 @@
-delivery-api/node_modules
+*/node_modules
 oauth20Example
-petshop-api/node_modules
-petshop-api-v2/node_modules
-livraria-api/node_modules
-livraria-api/config
+*/config
