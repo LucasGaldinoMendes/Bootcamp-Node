@@ -37,6 +37,7 @@ async function getVendas(cliente_id, livro_id, autor_id){
 }
 
 async function getVenda(id){
+    
     return await VendaRepository.getVenda(id);
 }
 

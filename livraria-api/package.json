@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
@@ -16,8 +16,10 @@
     "cors": "^2.8.5",
     "express": "^4.18.0",
     "express-basic-auth": "^1.2.1",
+    "jest": "^28.0.3",
     "mongodb": "^4.5.0",
     "pg": "^8.7.3",
+    "supertest": "^6.2.3",
     "winston": "^3.7.2"
   }
 }

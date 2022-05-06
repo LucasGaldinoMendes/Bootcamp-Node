@@ -83,11 +83,26 @@ async function getVendasByAutorId(id){
     }
 }
 
+async function deleteVenda(id){
+    const conn = await connect();
+    try {
+        const sql = "delete from  vendas where venda_id = $1";
+        const values = [id];
+        const res = await conn.query(sql, values);
+        return ;
+    } catch (error) {
+        throw error;
+    }finally{
+        conn.release();
+    }
+}
+
 export default{
     insertVenda,
     getVendas,
     getVenda,
     getVendasByClienteId,
     getVendasByLivroId,
-    getVendasByAutorId
+    getVendasByAutorId,
+    deleteVenda
 }

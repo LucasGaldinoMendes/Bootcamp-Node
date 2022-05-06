@@ -44,7 +44,7 @@ async function getClientes(){
 async function getCliente(id){
     const conn = await connect();
     try {
-        const sql = "select cliente_id, nome, email, endereco from  clientes where cliente_id = $1";
+        const sql = "select cliente_id, nome, email, endereco, telefone from  clientes where cliente_id = $1";
         const values = [id];
         const res = await conn.query(sql, values);
         return res.rows[0];
@@ -103,5 +103,6 @@ export default{
     getClientes,
     getCliente,
     deleteCliente,
-    getEmail
+    getEmail,
+    getCredentials
 };

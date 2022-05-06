@@ -42,7 +42,7 @@ async function verifyLogin(email, senha){
     if(!password){
         return false;
     }
-    return basicAuth.safeCompare(password, senha);
+    return basicAuth.safeCompare(password.senha, senha);
 }
 
 export default{
