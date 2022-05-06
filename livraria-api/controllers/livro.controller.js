@@ -28,7 +28,7 @@ async function updateLivro (req, res, next){
 
 async function getLivros (req, res, next){
     try {
-        res.send(await LivroService.getLivros(req.query.autorId));
+        res.send(await LivroService.getLivros(req.query.autor_id));
         global.logger.info(`get /livro`);
     } catch (error) {
         next(error);

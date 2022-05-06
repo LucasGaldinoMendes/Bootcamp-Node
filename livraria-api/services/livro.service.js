@@ -48,7 +48,10 @@ async function getLivros(autor_id){
 
 async function getLivro(id){
     const livro =  await LivroRepository.getLivro(id);
-    livro.info = await LivroInfoRepository.getInfo(id);
+    const info = await LivroInfoRepository.getInfo(id);
+    if (info) {
+        livro.info = info;
+    }
     return livro;
 
 }

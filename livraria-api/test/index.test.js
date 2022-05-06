@@ -40,7 +40,7 @@ const passwordAdmin = "desafio-igti-nodejs";
 let emailCliente = cliente.email;
 let passwordCliente = cliente.senha;
 
-test("Cenario 01 - Inclusão autor", async () => {
+test("Cenario 01 - Testes de integração", async () => {
     let res = await request(app).post("/autor").send(autor).auth(admin,passwordAdmin);
     autor.autor_id = res.body.autor_id;
     expect(res.body).toMatchObject(autor);
